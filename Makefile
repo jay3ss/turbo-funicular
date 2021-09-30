@@ -15,11 +15,11 @@ clean:
 
 test: clean-pyc
 	py.test --verbose --color=yes $(TEST_PATH)
-	
+
 init:
 	python -m pip install --upgrade pip
 	python -m pip install -r requirements.txt
-	
-init-dev: 
+
+init-dev:
 	make init
 	python -m pip install -r dev-requirements.txt
