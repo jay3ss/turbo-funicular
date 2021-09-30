@@ -5,7 +5,7 @@ help:
 	@echo "		initialize the project"
 	@echo "make init-dev"
 	@echo "		intialize the project for development"
-	@echo "make clean-pyc"
+	@echo "make clean"
 	@echo "		remove python artifacts"
 
 clean:
@@ -13,7 +13,7 @@ clean:
 	find . -name '*.pyo' -exec rm --force {} +
 	find . -name '*~' -exec rm --force {} +
 
-test: clean-pyc
+test: clean
 	py.test --verbose --color=yes $(TEST_PATH)
 
 init:
