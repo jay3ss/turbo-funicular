@@ -3,3 +3,4 @@ lxml
 python-crontab
 python-dotenv
 requests
+scrapy
