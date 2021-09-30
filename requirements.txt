@@ -1,0 +1,4 @@
+beautifulsoup4
+python-crontab
+python-dotenv
+requests
