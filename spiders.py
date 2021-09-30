@@ -1,9 +1,9 @@
-"""Module for scrapers"""
+"""Module for spiders"""
 import abc
 
 
-class BaseScraper(abc.ABC):
-    """Base class for scrapers to implement"""
+class BaseSpider(abc.ABC):
+    """Base class for spiders to implement"""
 
     def __init__(self, name, freq, url):
         self.name = name
@@ -13,8 +13,8 @@ class BaseScraper(abc.ABC):
 
     @abc.abstractmethod
     def run(self):
-        """Runs the scraper"""
+        """Runs the spider"""
 
     @abc.abstractmethod
     def results(self):
-        """Returns the results of the scraper"""
+        """Returns the results of the spider"""
