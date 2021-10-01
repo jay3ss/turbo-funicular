@@ -1,6 +1,8 @@
 """Module for spiders"""
 import abc
 
+from tftime import Rate
+
 
 class BaseSpider(abc.ABC):
     """Base class for spiders to implement"""
@@ -10,6 +12,7 @@ class BaseSpider(abc.ABC):
         self.freq = freq
         self.url = url
         self._results = None
+        self._rate = Rate(freq)
 
     @abc.abstractmethod
     def run(self):
