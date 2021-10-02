@@ -35,8 +35,8 @@ class Rate:
             self.last_time = datetime.datetime.now()
 
         sleep_time = self.sleep_duration - (current_time - self.last_time)
-        if sleep_time > 0:
-            time.sleep(sleep_time)
+        if sleep_time.seconds > 0:
+            time.sleep(sleep_time.seconds)
 
         self.last_time = datetime.datetime.now()
 
