@@ -7,8 +7,8 @@ class BaseFeed(abc.ABC):
 
     def __init__(self, name: str) -> None:
         self.name = name
-        self._spider = None
-        self._articles = None
+        self._scraper = None
+        self._parsers = None
 
     @abc.abstractmethod
     def subscribe(self) -> bool:
@@ -20,4 +20,17 @@ class BaseFeed(abc.ABC):
     def unsubscribe(self) -> bool:
         """
         Method to unsubscribe from the feed
+        """
+
+    @abc.abstractmethod
+    def run(self):
+        """
+        Method to start the feed
+        """
+
+    @property
+    @abc.abstractmethod
+    def feed(self):
+        """
+        Returns the results from the feed
         """
